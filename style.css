@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1c2e, #23263a);
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* App Container */
+.app-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  color: #4db8ff;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #cfd3db;
+}
+
+/* Video area */
+.video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.video-container video {
+  width: 45%;
+  height: auto;
+  background: #000;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.video-container video:hover {
+  transform: scale(1.02);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+.controls input {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.controls input::placeholder {
+  color: #b6b6b6;
+}
+
+.controls button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  background: #4db8ff;
+}
+
+.controls button:hover {
+  background: #3399ff;
+}
+
+.controls .end {
+  background: #ff4d4d;
+}
+
+.controls .end:hover {
+  background: #e60000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+  }
+
+  .video-container video {
+    width: 90%;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls input {
+    width: 100%;
+  }
+}

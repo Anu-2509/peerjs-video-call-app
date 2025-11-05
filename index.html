@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PeerJS Video Call</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>PeerJS Video Calling App</h2>
+    <div class="app-container">
+      <header>
+        <h2>🎥 PeerJS Video Call</h2>
+        <p>Your ID: <span id="peer-id">...</span></p>
+      </header>
 
-    <div>
-      <p>Your Peer ID: <span id="peer-id">...</span></p>
-      <input type="text" id="connect-to-id" placeholder="Enter peer ID to call" />
-      <button id="call-btn">Start Call</button>
-      <button id="end-call-btn">End Call</button>
-    </div>
-
-    <hr />
-
-    <div style="display: flex; gap: 20px;">
-      <div>
-        <h3>You</h3>
-        <video id="my-video" autoplay muted playsinline width="300"></video>
+      <div class="video-container">
+        <video id="my-video" autoplay muted playsinline></video>
+        <video id="partner-video" autoplay playsinline></video>
       </div>
-      <div>
-        <h3>Partner</h3>
-        <video id="partner-video" autoplay playsinline width="300"></video>
+
+      <div class="controls">
+        <input type="text" id="connect-to-id" placeholder="Enter peer ID to call" />
+        <button id="call-btn">📞 Start Call</button>
+        <button id="end-call-btn" class="end">❌ End Call</button>
       </div>
     </div>
 
